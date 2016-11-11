@@ -29,4 +29,4 @@ for qi in questions:
         print('No')
     else:
         print('Yes')
-        print(find_path(graph,qi[1],qi[0]))#this path to end(child on this example)
+        print(find_path(graph,qi[1],qi[0]))#this path to end(child on this example).
