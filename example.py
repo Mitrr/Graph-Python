@@ -1,22 +1,16 @@
 #this is example of work with graphs
 graph = {'C': ['A', 'B'],
-
          'D': ['C'],
-
          'E': ['C'],
-
          'F': ['D'],
-
          'G': ['E'],
-
          'H': ['G'],
-
          'I': ['H']}
 
-#first-enter the number of queries
+#first-enter the number of queries (for example 1)
 questions = list()
 for q in range(int(input())):
-    questions.append(list(input().replace(" ","")))#enter Child(end) and Parent(start)
+    questions.append(list(input().replace(" ","")))#enter Child(end) and Parent(start) like "A B"
 
 def find_path(graph, start, end, path=[]):
     path = path + [start]
@@ -35,8 +29,4 @@ for qi in questions:
         print('No')
     else:
         print('Yes')
-
-
-
-
-
+        print(find_path(graph,qi[1],qi[0]))#this path to end(child on this example)
